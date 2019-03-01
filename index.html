@@ -4,9 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/master.css">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|ZCOOL+QingKe+HuangYou" rel="stylesheet">
   <title>Document</title>
 </head>
-<body>
+  <body>
+    <header class="header">
+      <img class="header-img" src="logo.jpg" alt="logo">
+      <i class="icon-menu" id="header-menu"></i>
+      <input type="text">
+      <button class="header-button">Ir</button>
+      <nav class="header-nav" id="header-nav">
+        <ol>
+          <li>
+            <a href="">Inicio</a>
+          </li>
+          <li>
+            <a href="">Nosotros</a>
+          </li>
+          <li>
+            <a href="">Café</a>
+          </li>
+          <li>
+            <a href="">Risso maquinarias</a>
+          </li>
+          <li>
+            <a href="">Tiendas</a>
+          </li>
+          <li>
+            <a href="">Capacitación</a>
+          </li>
+          <li>
+            <a href="">Servicio Técnico</a>
+          </li>
+          <li>
+            <a href="">Contáctenos</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <section class="principal">
+      <img alt="" class="principal-imagen">
+    </section>
+    <script>
+      const $burgerButton=document.querySelector("#header-menu");
+      const $menu=document.querySelector("#header-nav")
 
-</body>
+      $burgerButton.addEventListener("click",hideShow);
+
+      function hideShow() {
+        if ($burgerButton.classList.contains("is-active")) {
+          $burgerButton.classList.remove("is-active");
+          $menu.classList.remove("is-active");
+        }else{
+          $burgerButton.classList.add("is-active");
+          $menu.classList.add("is-active");
+        }
+      }
+    </script>
+  </body>
 </html>

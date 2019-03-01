@@ -1,3 +1,136 @@
+/*
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  font-family: 'Fjalla One', sans-serif;
+*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?91d7ss');
+  src:  url('../fonts/icomoon.eot?91d7ss#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?91d7ss') format('truetype'),
+    url('../fonts/icomoon.woff?91d7ss') format('woff'),
+    url('../fonts/icomoon.svg?91d7ss#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+.header {
+  height: 225px;
+  padding: 10px 15px 25px 15px;
+  display: grid;
+  grid-template-rows: 120px 50px;
+  grid-template-columns: 210px 1fr;
+  grid-row-gap: 70px;
+}
+
+.header-img {
+  height: 120px;
+  width: 210px;
+}
+
+.icon-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 25px;
+  color: #C5020F;
+  transition-duration: 1.2s;
+}
+
+.header-button {
+  background-color: #C5020F;
+  border-color: #C5020F;
+  color: white;
+  height: 50px;
+  width: 50px;
+}
+
+.icon-menu.is-active {
+  opacity: 0.75;
+  transition-duration: 1.2s;
+}
+
+.header-nav {
+  position: absolute;
+  background-color: white;
+  width: 108%;
+  top: 140px;
+  left: -110vw;
+  transition-duration: 0.5s;
+}
+
+.header-nav ol {
+  padding: 0;
+  padding-left: 25px;
+}
+
+.header-nav li{
+  list-style: none;
+}
+
+.header-nav li a {
+  text-decoration: none;
+  color: #C5020F;
+  font-family: 'Fjalla One', sans-serif;
+  line-height: 27px;
+}
+
+.header-nav.is-active {
+  left: 0;
+  transition-duration: 0.5s;
+}
+
+.principal {
+  width: calc(100%-30px);
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 86.5px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.principal-imagen {
+  animation-name: change;
+  animation-duration: 30s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  background-size: 100% 27vw;
+  width: 100%;
+  height: 27vw;
+}
+
+@keyframes change {
+  0% {
+    background-image: url("../cafe.jpg");
+  }
+  50% {
+    background-image: url("../cafe2.jpg");
+  }
+  100% {
+    background-image: url("../cafe3.jpg");
+  }
+}
+
 body {
   margin: 0;
 }
