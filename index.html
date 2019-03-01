@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/master.css">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|ZCOOL+QingKe+HuangYou" rel="stylesheet">
-  <title>Document</title>
+  <link rel="icon" type="png" href="risso-icon.png">
+  <title>Café Risso</title>
 </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <img class="header-img" src="logo.jpg" alt="logo">
       <i class="icon-menu" id="header-menu"></i>
       <input type="text">
@@ -45,9 +46,29 @@
     <section class="principal">
       <img alt="" class="principal-imagen">
     </section>
+    <section class="options">
+      <img src="articafe.jpg">
+      <img src="risso.jpg">
+      <img src="tienda.jpg">
+      <img src="capaci.jpg">
+      <img src="servicio.jpg">
+    </section>
+    <footer class="footer">
+      <span>Todos los derechos reservados para Cafe Risso ©2018 - Lima Perú</span>
+      <div class="footer-container">
+        <i class="icon-instagram"></i>
+        <i class="icon-facebook2"></i>
+        <i class="icon-youtube"></i>
+      </div>
+      <div class="footer-direction">
+        <a href="#header">
+          <i class="icon-circle-up"></i>
+        </a>
+      </div>
+    </footer>
     <script>
       const $burgerButton=document.querySelector("#header-menu");
-      const $menu=document.querySelector("#header-nav")
+      const $menu=document.querySelector("#header-nav");
 
       $burgerButton.addEventListener("click",hideShow);
 
@@ -60,6 +81,17 @@
           $menu.classList.add("is-active");
         }
       }
+
+      const ipad = window.matchMedia('screen and (max-width: 980px)');
+    
+      ipad.addListener((event) => {
+      if(event.matches) {
+        $burgerButton.addEventListener('click', hideShow);
+      } else {
+        $burgerButton.removeEventListener('click', hideShow);
+        }
+      });
+
     </script>
   </body>
 </html>
