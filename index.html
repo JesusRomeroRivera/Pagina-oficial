@@ -12,7 +12,7 @@
     <header class="header" id="header">
       <img class="header-img" src="logo.jpg" alt="logo">
       <i class="icon-menu" id="header-menu"></i>
-      <input type="text">
+      <input type="search" placeholder="Buscar">
       <button class="header-button">Ir</button>
       <nav class="header-nav" id="header-nav">
         <ol>
@@ -83,7 +83,7 @@
       }
 
       const ipad = window.matchMedia('screen and (max-width: 980px)');
-    
+
       ipad.addListener((event) => {
       if(event.matches) {
         $burgerButton.addEventListener('click', hideShow);
